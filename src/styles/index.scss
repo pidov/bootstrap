@@ -1,3 +1,12 @@
-div {
-  background: red;
+// @import '~ag-grid/dist/styles/ag-grid';
+
+@import '~connect-bootstrap/scss/connect-bootstrap';
+@import '~connect-bootstrap/scss/_connect-common-variables';
+
+html.dark {
+    @import '~connect-bootstrap/scss/_connect-dark-variables';
+}
+
+html.light {
+    @import '~connect-bootstrap/scss/_connect-light-variables';
 }
