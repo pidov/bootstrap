@@ -1,7 +1,7 @@
+import NotFound from './Notfound'
 
 const Home = () => 'Hello from Home'
 const MainLayout = () => 'Hello from MainLayout'
-const NotFound = () => 'Hello from NotFound'
 
 export default [{
   path: '/',
