@@ -1,0 +1,86 @@
+
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
+const { map } = require('lodash')
+const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+const pjson = require('../package.json')
+const paths = require('./paths')
+
+const vendor = map(pjson.dependencies, (val, key) => key)
+
+console.log(path.resolve('./'))
+console.log(path.resolve(__dirname))
+module.exports = {
+  context: path.resolve('./'),
+  entry: {
+    app: [
+      'babel-polyfill',
+      './src/index.js'
+    ],
+    vendor
+  },
+  output: {
+    path: path.resolve('dist/'),
+    filename: '[name].bundle.js',
+    publicPath: '/'
+  },
+  module: {
+    rules: [{
+      enforce: 'pre',
+      test: /\.jsx?$/,
+      loader: 'standard-loader',
+      exclude: /(node_modules|vendor)/,
+      options: {
+        error: false,
+        parser: 'babel-eslint'
+      }
+    }, {
+      test: /\.jsx?$/,
+      loader: 'babel-loader',
+      exclude: /(node_modules|vendor)/
+    }, {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader?sourceMap']
+    }, {
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
+        'resolve-url-loader', 'postcss-loader',
+        { loader: 'sass-loader', options: { relativeUrls: true, sourceMap: true } }
+      ]
+    }, {
+      test: /\.(png|jpe?g|gif)$/,
+      loader: 'file-loader?name=assets/[name].[hash].[ext]'
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+      loader: 'url-loader?importLoaders=1&limit=100000'
+    }]
+  },
+  plugins: [
+    new CleanWebpackPlugin(['dist/'], {
+      root: path.resolve('./'),
+      verbose: true,
+      dry: false
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module, count) {
+        // this assumes your vendor imports exist in the node_modules directory
+        return (module.context && module.context.indexOf('node_modules') !== -1) || count >= 2
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html.ejs',
+      filename: 'index.html',
+      hash: true
+    })
+  ],
+  resolve: {
+    alias: {}
+  }
+}
