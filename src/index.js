@@ -1,15 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
+import createHistory from 'history/createBrowserHistory'
 
 import App from './App'
+import ErrorBoundary from './ErrorBoundary'
+import createStore from './store/createStore'
+
+const history = createHistory()
+const store = createStore(history)
 
 const appContainer = document.getElementById('app')
 
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <ErrorBoundary>
+        <Component store={store} history={history} />
+      </ErrorBoundary>
     </AppContainer>,
     appContainer
   )
