@@ -3,8 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const { map } = require('lodash')
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const pjson = require('../package.json')
 const paths = require('./paths')
@@ -49,7 +47,10 @@ module.exports = {
       use: [
         'style-loader',
         { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
-        'resolve-url-loader', 'postcss-loader',
+        'resolve-url-loader', {
+          loader: 'postcss-loader',
+          options: { sourceMap: true }
+        },
         { loader: 'sass-loader', options: { relativeUrls: true, sourceMap: true } }
       ]
     }, {
@@ -62,11 +63,6 @@ module.exports = {
     }]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist/'], {
-      root: path.resolve('./'),
-      verbose: true,
-      dry: false
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module, count) {
@@ -81,6 +77,8 @@ module.exports = {
     })
   ],
   resolve: {
-    alias: {}
+    alias: {
+      '@styles': paths.appStyles
+    }
   }
 }

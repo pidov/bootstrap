@@ -7,4 +7,6 @@ const fs = require('fs')
 const appDirectory = fs.realpathSync(process.cwd())
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 
-module.exports = {}
+module.exports = {
+  appStyles: resolveApp('src/styles')
+}

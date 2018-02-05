@@ -1,5 +1,7 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   devtool: 'source-map',
@@ -27,7 +29,10 @@ module.exports = {
             sourceMap: true,
             discardComments: { removeAll: true }
           }
-        }, 'resolve-url-loader', 'postcss-loader', {
+        }, 'resolve-url-loader', {
+          loader: 'postcss-loader',
+          options: { sourceMap: true }
+        }, {
           loader: 'sass-loader',
           options: {
             sourceMap: true,
@@ -38,6 +43,11 @@ module.exports = {
     }]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist/'], {
+      root: path.resolve('./'),
+      verbose: true,
+      dry: false
+    }),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,
       exclude: /(\.manager\.js|\.pub\.js)/i,
