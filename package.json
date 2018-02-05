@@ -1,0 +1,11 @@
+{
+  "name": "js-loan-connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Ivan Pidov <ivan.pidov@gmail.com>",
+  "license": "ISC"
+}
