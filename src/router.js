@@ -1,4 +1,4 @@
-import NotFound from './Notfound'
+import NotFound from './NotFound'
 
 const Home = () => 'Hello from Home'
 const MainLayout = () => 'Hello from MainLayout'
