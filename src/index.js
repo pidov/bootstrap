@@ -6,24 +6,12 @@ import createHistory from 'history/createHashHistory'
 import App from './App'
 import ErrorBoundary from './ErrorBoundary'
 import createStore from './store/createStore'
+import routes from './router'
 
 const history = createHistory()
 const store = createStore(history)
 
 const appContainer = document.getElementById('app')
-
-const Home = () => 'Hello from Home'
-const MainLayout = () => 'Hello from MainLayout'
-const NotFound = () => 'Hello from NotFound'
-
-const routes = [{
-  path: '/',
-  exact: true,
-  component: Home,
-  layout: MainLayout
-}, {
-  component: NotFound
-}]
 
 const render = Component => {
   ReactDOM.render(

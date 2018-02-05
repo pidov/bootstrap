@@ -12,7 +12,7 @@ export default class App extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history} >
           <Switch>
-            { routes.map(route => <Route {...route} key={route.path} />) }
+            { routes.map(route => <Route {...route} key={route} />) }
           </Switch>
         </ConnectedRouter>
       </Provider>
