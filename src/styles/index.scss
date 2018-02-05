@@ -4,29 +4,29 @@
 @import '~connect-bootstrap/scss/_connect-common-variables';
 
 html.dark {
-    @import '~connect-bootstrap/scss/_connect-dark-variables';
+  @import '~connect-bootstrap/scss/_connect-dark-variables';
 }
 
 html.light {
-    @import '~connect-bootstrap/scss/_connect-light-variables';
+  @import '~connect-bootstrap/scss/_connect-light-variables';
 }
 
 .page-error {
-    height: 400px;
-    top: 50%;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    margin-top: -200px;
-    text-align: center;
-    h1 {
-        font-size: 25em !important;
-        font-weight: 900 !important;
-    }
-    h2 {
-        font-size: 3.75em !important;
-        text-transform: uppercase;
-        font-weight: 900 !important;
-        margin-top: -30px !important;
-    }
+  height: 400px;
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: -200px;
+  text-align: center;
+  h1 {
+    font-size: 25em !important;
+    font-weight: 900 !important;
+  }
+  h2 {
+    font-size: 3.75em !important;
+    text-transform: uppercase;
+    font-weight: 900 !important;
+    margin-top: -30px !important;
+  }
 }
