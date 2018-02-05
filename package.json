@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "build": "cross-env NODE_ENV=production webpack --config=config",
-    "test": "test"
+    "test": "test",
+    "postinstall": "npm rebuild node-sass",
+    "git-config": "git config core.hooksPath git-hooks"
   },
   "author": "[Your Name] <[your.name]@tick42.com>",
   "license": "ISC",
