@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "cross-env NODE_ENV=development node index.js",
     "build": "cross-env NODE_ENV=production webpack --config=config",
     "test": "test",
     "postinstall": "npm rebuild node-sass",
