@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import { AppContainer, unmountComponentAtNode } from 'react-hot-loader'
 import createHistory from 'history/createHashHistory'
 
-import App from '@common/App'
-import ErrorBoundary from '@common/ErrorBoundary'
+import App from '@components/App'
+import ErrorBoundary from '@components/ErrorBoundary'
 import createStore from '@store/createStore'
 import routes from './router'
 
@@ -27,7 +27,7 @@ const render = Component => {
 render(App)
 
 if (module.hot) {
-  module.hot.accept('@common/App', () => {
+  module.hot.accept('@components/App', () => {
     unmountComponentAtNode(appContainer)
     render(App)
   })

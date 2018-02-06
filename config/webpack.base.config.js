@@ -77,7 +77,7 @@ module.exports = {
   resolve: {
     alias: {
       '@styles': paths.appStyles,
-      '@common': paths.appCommon,
+      '@components': paths.appComponents,
       '@store': paths.appStore
     }
   }

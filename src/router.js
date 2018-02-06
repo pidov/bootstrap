@@ -1,4 +1,4 @@
-import NotFound from '@common/NotFound'
+import NotFound from '@components/NotFound'
 
 const Home = () => 'Hello from Home'
 const MainLayout = () => 'Hello from MainLayout'

@@ -9,6 +9,6 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 
 module.exports = {
   appStyles: resolveApp('src/styles'),
-  appCommon: resolveApp('src/common'),
+  appComponents: resolveApp('src/components'),
   appStore: resolveApp('src/store')
 }
