@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
-import { Route, Switch } from 'react-router-dom'
+import { Switch } from 'react-router-dom'
+import LayoutRoute from '@components/LayoutRoute'
 
 import '@styles'
 
@@ -12,7 +13,7 @@ export default class App extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history} >
           <Switch>
-            { routes.map(route => <Route {...route} key={route} />) }
+            { routes.map(route => <LayoutRoute {...route} key={route} />) }
           </Switch>
         </ConnectedRouter>
       </Provider>
