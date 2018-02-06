@@ -18,7 +18,7 @@ npm install
 npm run git-config
 ``` 
 
-## Running the project
+## Running the application
 Now that the installation is done, you're ready to start the project. Simply run ```npm run start``` to start developing.
 
 Several additional scripst are available:
@@ -31,8 +31,8 @@ test  | Runs tests
 git-config | Configures git to use the hooks from git-hooks
 
 ## Technology stack
-1. 
-2. 
+React
+Redux 
 
 ## Project structure
 ```
