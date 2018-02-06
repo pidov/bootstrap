@@ -19,13 +19,8 @@ const compiler = webpack(webpackConfig)
 // process.env.JPM_ENV = process.argv[2]
 
 app.use(webpackDevMiddleware(compiler, {
-  stats: {
-    colors: true,
-    reasons: false,
-    chunks: false
-  },
+  stats: 'errors-only',
   publicPath: webpackConfig.output.publicPath,
-  hot: true,
   watchOptions: {
     aggregateTimeout: 300,
     poll: 1000

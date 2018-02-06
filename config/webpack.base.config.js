@@ -9,8 +9,6 @@ const paths = require('./paths')
 
 const vendor = map(pjson.dependencies, (val, key) => key)
 
-console.log(path.resolve('./'))
-console.log(path.resolve(__dirname))
 module.exports = {
   context: path.resolve('./'),
   entry: {
