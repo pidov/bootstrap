@@ -8,7 +8,8 @@ const appDirectory = fs.realpathSync(process.cwd())
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 
 module.exports = {
-  appStyles: resolveApp('src/styles'),
-  appComponents: resolveApp('src/components'),
-  appStore: resolveApp('src/store')
+  '@styles': resolveApp('src/styles'),
+  '@components': resolveApp('src/components'),
+  '@store': resolveApp('src/store'),
+  '@layouts': resolveApp('src/layouts')
 }

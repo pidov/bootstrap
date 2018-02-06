@@ -4,10 +4,10 @@ const webpack = require('webpack')
 const { map } = require('lodash')
 const path = require('path')
 
-const pjson = require('../package.json')
-const paths = require('./paths')
+const { dependencies } = require('../package.json')
+const alias = require('./alias')
 
-const vendor = map(pjson.dependencies, (val, key) => key)
+const vendor = map(dependencies, (val, key) => key)
 
 module.exports = {
   context: path.resolve('./'),
@@ -74,11 +74,5 @@ module.exports = {
       hash: true
     })
   ],
-  resolve: {
-    alias: {
-      '@styles': paths.appStyles,
-      '@components': paths.appComponents,
-      '@store': paths.appStore
-    }
-  }
+  resolve: { alias }
 }
