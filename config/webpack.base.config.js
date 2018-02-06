@@ -78,7 +78,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@styles': paths.appStyles
+      '@styles': paths.appStyles,
+      '@common': paths.appCommon,
+      '@store': paths.appStore
     }
   }
 }
