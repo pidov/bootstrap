@@ -6,9 +6,10 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node index.js",
     "build": "cross-env NODE_ENV=production webpack --config=config",
-    "test": "test",
+    "test": "wdio wdio.conf.js",
     "postinstall": "npm rebuild node-sass",
-    "git-config": "git config core.hooksPath git-hooks"
+    "git-config": "git config core.hooksPath git-hooks",
+    "report": "allure generate ./allure-results && allure open"
   },
   "author": "[Your Name] <[your.name]@tick42.com>",
   "license": "ISC",
@@ -29,6 +30,7 @@
     "redux-seamless-immutable": "^0.4.0"
   },
   "devDependencies": {
+    "allure-commandline": "^2.5.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
@@ -54,6 +56,11 @@
     "standard-loader": "^6.0.1",
     "style-loader": "^0.20.1",
     "url-loader": "^0.6.2",
+    "wdio": "^1.0.3",
+    "wdio-allure-reporter": "^0.3.2",
+    "wdio-cucumber-framework": "^1.1.0",
+    "wdio-dot-reporter": "0.0.9",
+    "wdio-selenium-standalone-service": "0.0.9",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0",

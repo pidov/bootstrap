@@ -10,7 +10,8 @@ const alias = require('./alias')
 let vendor = []
 
 forEach(dependencies, (version, packageName) => {
-  // There's an issue with webpack and tarball pacakges, so we filter them out until a better solution is found.
+  // There's an issue with webpack and tarball pacakges,
+  // so we filter them out until a better solution is found.
   if (!version.endsWith('.tar.gz')) {
     vendor.push(packageName)
   }
