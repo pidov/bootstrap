@@ -1,13 +1,20 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
-const { map } = require('lodash')
+const { forEach } = require('lodash')
 const path = require('path')
 
 const { dependencies } = require('../package.json')
 const alias = require('./alias')
 
-const vendor = map(dependencies, (val, key) => key)
+let vendor = []
+
+forEach(dependencies, (version, packageName) => {
+  // There's an issue with webpack and tarball pacakges, so we filter them out until a better solution is found.
+  if (!version.endsWith('.tar.gz')) {
+    vendor.push(packageName)
+  }
+})
 
 module.exports = {
   context: path.resolve('./'),

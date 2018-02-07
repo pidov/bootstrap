@@ -1538,8 +1538,7 @@
     "bootstrap": {
       "version": "4.0.0-beta",
       "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.0.0-beta.tgz",
-      "integrity": "sha512-I/r3fYtUZr+rUNkh8HI+twxZ56p6ehNn27eA1XSebLVQKAJ2xZHnEvZrSR+UR2A/bONcd9gHC3xatVhQlH6R6w==",
-      "dev": true
+      "integrity": "sha512-I/r3fYtUZr+rUNkh8HI+twxZ56p6ehNn27eA1XSebLVQKAJ2xZHnEvZrSR+UR2A/bONcd9gHC3xatVhQlH6R6w=="
     },
     "brace-expansion": {
       "version": "1.1.8",
@@ -2101,8 +2100,7 @@
     },
     "connect-bootstrap": {
       "version": "file:packages/connect-bootstrap-2.1.1.tar.gz",
-      "integrity": "sha512-7Sr9HIsMur0S2rMqwOUc29BFGuKKvymBbVzgbkMmM1bJVmRz8ifBdaDPStz3oxqvcqsDEytoNeqDi9NvC/AzLQ==",
-      "dev": true,
+      "integrity": "sha1-10IEirp4gDo3V/pm4tHfjQtivfg=",
       "requires": {
         "bootstrap": "4.0.0-beta",
         "font-awesome": "4.7.0"
@@ -2508,8 +2506,7 @@
     "deep-diff": {
       "version": "0.3.8",
       "resolved": "https://registry.npmjs.org/deep-diff/-/deep-diff-0.3.8.tgz",
-      "integrity": "sha1-wB3mPvsO7JeYgB1Ax+Da4ltYLIQ=",
-      "dev": true
+      "integrity": "sha1-wB3mPvsO7JeYgB1Ax+Da4ltYLIQ="
     },
     "deep-is": {
       "version": "0.1.3",
@@ -3537,8 +3534,7 @@
     "font-awesome": {
       "version": "4.7.0",
       "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz",
-      "integrity": "sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=",
-      "dev": true
+      "integrity": "sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM="
     },
     "for-in": {
       "version": "1.0.2",
@@ -7167,7 +7163,6 @@
       "version": "3.0.6",
       "resolved": "https://registry.npmjs.org/redux-logger/-/redux-logger-3.0.6.tgz",
       "integrity": "sha1-91VZZvMJjzyIYExEnPC69XeCdL8=",
-      "dev": true,
       "requires": {
         "deep-diff": "0.3.8"
       }
@@ -7176,7 +7171,6 @@
       "version": "0.4.0",
       "resolved": "https://registry.npmjs.org/redux-seamless-immutable/-/redux-seamless-immutable-0.4.0.tgz",
       "integrity": "sha512-/oS3fhrize9D3RSHemgJxVllohybRrad5IjccotFy8Ni4IKAPTtX1mqszpiCIl12+7v0dNqBpq6ES6R236AliQ==",
-      "dev": true,
       "requires": {
         "react-router-redux": "4.0.8",
         "seamless-immutable": "7.1.3"
@@ -7185,8 +7179,7 @@
         "react-router-redux": {
           "version": "4.0.8",
           "resolved": "https://registry.npmjs.org/react-router-redux/-/react-router-redux-4.0.8.tgz",
-          "integrity": "sha1-InQDWWtRUeGCN32rg1tdRfD4BU4=",
-          "dev": true
+          "integrity": "sha1-InQDWWtRUeGCN32rg1tdRfD4BU4="
         }
       }
     },
@@ -7591,8 +7584,7 @@
     "seamless-immutable": {
       "version": "7.1.3",
       "resolved": "https://registry.npmjs.org/seamless-immutable/-/seamless-immutable-7.1.3.tgz",
-      "integrity": "sha512-ODZawMxNf7n0Ufec01tvaD/CeeYEf9G+fjYc7Q6qAJytTWha1bdtNkjh4Oei1GeYakMF3S+mQMhZv9l7OtcORg==",
-      "dev": true
+      "integrity": "sha512-ODZawMxNf7n0Ufec01tvaD/CeeYEf9G+fjYc7Q6qAJytTWha1bdtNkjh4Oei1GeYakMF3S+mQMhZv9l7OtcORg=="
     },
     "semver": {
       "version": "5.5.0",
