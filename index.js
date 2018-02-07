@@ -4,9 +4,9 @@ const cookieParser = require('cookie-parser')
 const path = require('path')
 
 const webpack = require('webpack')
-const webpackConfig = require('./config')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
+const webpackConfig = require('./config')
 
 const TARGET_DIR = 'dist/'
 const PORT = 3000

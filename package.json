@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node index.js",
     "build": "cross-env NODE_ENV=production webpack --config=config",
-    "test": "wdio wdio.conf.js",
+    "test": "wdio config/wdio.conf.js",
     "postinstall": "npm rebuild node-sass",
     "git-config": "git config core.hooksPath git-hooks",
     "report": "allure generate ./allure-results && allure open"

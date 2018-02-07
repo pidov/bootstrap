@@ -55,7 +55,12 @@ module.exports = {
         { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
         'resolve-url-loader', {
           loader: 'postcss-loader',
-          options: { sourceMap: true }
+          options: {
+            sourceMap: true,
+            config: {
+              path: './config/postcss.config.js'
+            }
+          }
         },
         { loader: 'sass-loader', options: { relativeUrls: true, sourceMap: true } }
       ]
